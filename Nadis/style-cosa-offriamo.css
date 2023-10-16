@@ -1,0 +1,38 @@
+main {
+    background-color: rgb(219, 206, 187);
+
+}
+
+.box-offerta {
+    background-color: rgb(194, 182, 165);
+    padding: 10px;
+}
+
+.speciale {
+    background-color: rgb(238, 205, 159);
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.prezzo {
+    margin: 20px;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .box-offerta {
+        padding: 30px;
+    }
+    
+    .doppio {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .descrizione {
+        padding: 10px;
+    }
+}
