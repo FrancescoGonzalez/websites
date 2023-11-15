@@ -1,0 +1,13 @@
+#principal-card {
+    width: 20rem; 
+    height: 36rem;
+}
+
+#drawing {
+    height: 100px;
+}
+
+#temperature {
+    margin-top: 2rem;
+    font-size: 3rem;
+}

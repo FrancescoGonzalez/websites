@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h1>My shopping list</h1>
+    <!--
     <div>
 
         <label for="item">Enter a new item:</label>
@@ -24,7 +24,102 @@
     <ul>
     </ul>
 
+    -->
+    
+    <h1>My Data</h1>
+    <form name="myForm">
+        <p><label>Nome:    <input type="text" name="txtNome"/></label required></p>
+        <p><label>Cognome: <input type="text" name="txtCognome"/></label></p>
+        
+        <p>
+        <label>
+            Luogo di lavoro: 
+        <select name="luogo">
+            <option value="lugano">Lugano</option></label>
+            <option value="Bedano">Bedano</option>
+            <option value="Pregassona">Pregassona</option>
+            <option value="Bari">Bari</option>
+            <option value="Bogotà">Bogotà</option>
+        </select>
+        </label>
+        </p>
+
+    </form>
+    
+    <br>
+    <button>send</button>
+    <div id="data">
+        <ul></ul>
+    </div>
+    
+
+
     <script type="text/javascript">
+        const button = document.querySelector("button");
+        const ul = document.querySelector("ul");
+        let id = 1;
+
+        button.addEventListener("click", () => {
+            let form = document.forms.myForm;
+            let nome = form.txtNome.value;
+            let cognome = form.txtCognome.value;
+
+            let luogo = form.luogo.value;
+
+            let span = document.createElement("span");
+            const text = "id: " + id + ", Nome: " + nome + ", Cognome " + cognome + ", Luogo di lavoro: " + luogo;
+            span.textContent = text;
+            id++;
+
+            let inner = document.createElement("button");
+            inner.textContent = "cancella"
+            span.appendChild(inner);
+
+            let li = document.createElement("li");
+            li.appendChild(span);
+
+            ul.appendChild(li);
+
+            inner.addEventListener("click", () => {
+                ul.removeChild(li);
+            });
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
         const input = document.getElementById("item");
         const button = document.querySelector("button");
         const ul = document.querySelector("ul");
@@ -46,6 +141,20 @@
                 });
             }
         });
+
+
+        // FORMS
+
+        var myForm     = document.forms.myForm;
+        var txtNome    = myForm.txtNome;
+        var txtCognome = myForm.txtCognome;
+        
+        function printData() {
+            return txtNome, txtCognome;
+        }
+        */
+
+
 
     </script>
 </body>

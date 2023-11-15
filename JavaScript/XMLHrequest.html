@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universities in Italy </title>
+</head>
+<body>
+  <h1>Universities in Italy using XMLHttpRequest</h1>
+  <ul id="universities-list"></ul>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      // Configure it: GET-request for the specified URL
+      xhr.open('GET', 'http://universities.hipolabs.com/search?country=Switzerland', true);
+
+      // Define the callback function to handle the response
+      xhr.onload = function() {
+        alert("1");
+        // Check if the request was successful (status code 200)
+        if (xhr.status === 200) {
+          // Parse the JSON response
+          console.log(xhr.response)
+          var data = JSON.parse(xhr.responseText);
+
+          // Get the ul element to append the universities
+          var universitiesList = document.getElementById('universities-list');
+
+          // Iterate over the array of universities and create list items
+          data.forEach((university) => {
+            var listItem = document.createElement('li');
+            listItem.textContent = university.name;
+            universitiesList.appendChild(listItem);
+          });
+        } else {
+          // If the request was not successful, log the status code
+          console.error('Request failed. Status: ' + xhr.status);
+        }
+      };
+
+      // Handle any errors that occur.
+      xhr.onerror = function() {
+        console.error('Request failed due to a network error.');
+      };
+
+      // Send the request
+      xhr.send();
+
+      
+
+      alert("2")
+    });
+  </script>
+</body>
+</html>

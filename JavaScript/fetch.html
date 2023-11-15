@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universities in Italy</title>
+</head>
+<body>
+  <h1>Universities in Italy using FETCH</h1>
+  <ul id="universities-list"></ul>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Make a GET request using fetch
+      fetch('http://universities.hipolabs.com/search?country=Italy')
+        .then(response => {
+          // Check if the request was successful (status code 200)
+          if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.status);
+          }
+
+          // Parse the JSON response
+          return response.json();
+        })
+        .then(data => {
+          // Get the ul element to append the universities
+          const universitiesList = document.getElementById('universities-list');
+            console.log(data)
+          // Iterate over the array of universities and create list items
+          data.forEach(university => {
+            const listItem = document.createElement('li');
+            listItem.textContent = university.name;
+            universitiesList.appendChild(listItem);
+          });
+        })
+        .catch(error => {
+          // Handle errors
+          console.error('Fetch error:', error);
+        });
+    });
+  </script>
+</body>
+</html>

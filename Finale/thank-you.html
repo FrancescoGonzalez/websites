@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cornercard.ch</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            :root {
+                --light-blue: #edf0fc;
+            }
+
+            main {
+                padding: 104px;
+            }
+
+            @media screen and (min-width: 768px) {
+                main {
+                    padding: 175px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="bg-primary p-4">
+            <nav class="navbar navbar-expand-md justify-content-around">
+                <div id="header-logo">
+                    <img src="./img/Cornercard_Logo.svg" alt="logo">
+                </div>
+                <button class="navbar-toggler text-white bg-primary-subtle" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarSupportedContent" class="navbar-collapse collapse justify-content-around">
+                    <ul class="navbar-nav m-3 m-lg-0 mt-4 text-center">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link text-white">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#carte" class="nav-link text-white">Carte di credito</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <h1 id="grazie" class="text-center"></h1>
+                <h1 class="text-center">La tua richiesta è stata inviata!</h1>
+                <br class="text-center">
+                <p class="text-center mb-5">Riceverai una mail a breve con i prossimi passaggi</p>
+                <h3 class="text-center">Dove vuoi andare ora?</h3>
+                <ul class=" m-3 m-lg-0 mt-4 justify-content-center d-grid">
+                    <li class="">
+                        <a href="index.html" class="text-black text-decoration-none">Home</a>
+                    </li>
+                    <li class="">
+                        <a href="index.html#carte" class="text-black text-decoration-none">Carte di credito</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer class="p-0 bg-primary">
+            <div class="container-fluid text-center text-light p-3 p-md-5 flex-lg-row flex-column d-flex align-items-center justify-content-around">
+                <div id="header-logo">
+                    <img src="./img/Cornercard_Logo.svg" alt="logo">
+                </div>
+                <div class="opacity-75 mt-3">
+                    <p>© 2023 Cornèrcard - Cornèr Banca SA, Cornèrcard, Via Canova 16, 6901 Lugano</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            const params = new URLSearchParams(document.location.search);
+            let name = params.get("nome");
+
+            let h1 = document.getElementById("grazie");
+            h1.textContent = `Grazie ${name}`;
+        </script>
+    </body>
+</html>
