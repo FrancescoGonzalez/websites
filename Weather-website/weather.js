@@ -151,3 +151,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+/*
+function resolveAfter2Seconds(msg) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log(msg);
+      const rnd = Math.random(); 
+      console.log(rnd)
+      if (rnd>0.5){ 
+        resolve('resolved');
+      }else{
+        reject('WTF');
+      }
+    }, 2000);
+  }).then((res) => {console.log("fulfilled: "+res);})
+    .catch((res) => {console.log("rejected: "+res);});
+}
+
+async function asyncCall() {
+  console.log('calling');
+  resolveAfter2Seconds("promise 1 fulfilled");
+  console.log("launched asynch call 1");
+
+}
+
+asyncCall();
+
+*/
