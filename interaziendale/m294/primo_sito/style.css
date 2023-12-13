@@ -1,0 +1,286 @@
+/******************Basi del documento**********************/
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+/******************************Classi universali***************************/
+.align-center {
+    align-items: center;
+}
+
+.space-b {
+    justify-content: space-between;
+}
+
+#red {
+    color: #FF5A5F;
+}
+
+.flex {
+    display: flex;
+}
+
+/********************************Main**************************************/
+#main-index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#main-carasso {
+    margin: 0px 75px;
+}
+
+#main-search {
+    text-align: center;
+    align-items: center;
+}
+/*********************Bordi arrotondati (vedi navbar sul browser)******************/
+.border {
+    border-style: solid;
+    border-radius: 40px;
+    align-items: center;
+    border-width: 1px;
+}
+
+.border-white {
+    border-color: white;
+}
+
+.inner-border {
+    margin: 5px;
+}
+/******************************Box****************************************/
+.box {
+    padding: 10px;
+}
+
+.box:hover .underline-when-hover {
+    text-decoration: underline;
+}
+
+/*********************************Nav****************************************/
+
+#logo-nav {
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#second-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.second-nav-item {
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    font-size: 12px;
+    text-align: center;
+}
+
+.second-nav-div {
+    display: flex;
+}
+
+/*********************************various images******************************************/
+#table img {
+    height: 190px;
+    margin: 0px 0px 6px 6px;
+    border-radius: 10px;
+}
+
+.table-big-image img {
+    height: 386px;
+    border-radius: 10px;
+}
+
+#images {
+    justify-content: center;
+}
+
+#author img {
+    border-radius: 40px;
+}
+
+.links img {
+    height: 22px;
+}
+
+
+#main-search img{
+    height: 100%; /*400px*/
+}
+
+.cont_img {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pic {
+    width: 70%;
+    height: 100%;
+}
+
+.place-img {
+    height: 175px;
+}
+
+/*************************************Search****************************************/
+#search {
+    height: 20px;
+}
+
+#search-div {
+    background-color: #FF5A5F;
+}
+
+#left {
+    text-align: center;
+    display: grid;
+    align-content: center;
+}
+
+#group-text-img {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#right {
+    height: 420px;
+    padding-left: 80px;
+}
+
+/***********************************tabella con dati dell'autore del'airbnb******************************************/
+#author-data {
+    margin-left: 20px;
+}
+
+#name{
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+#years{
+    margin: 0px;
+}
+
+/**********************************altro*******************************************/
+#input {
+    display: flex;
+    padding: 5px;
+    height: 25px;
+}
+
+.menu-account {
+    display: flex;
+    padding: 10px;
+    height: 25px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.low {
+    opacity: 70%;
+    margin: 0;
+}
+
+#altro {
+    width: fit-content;
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.links {
+    text-decoration: underline;
+}
+
+#description h4 {
+    margin: 21.28px 0px 0px 0px;
+}
+
+#description p {
+    margin: 10px 0px 0px 0px;
+}
+
+#reviews u {
+    margin-left: 14px;
+}
+
+footer {
+    text-align: center;
+    opacity: 70%;
+    font-size: small;
+}
+
+
+
+@media only screen and (max-width: 672px) {
+    #logo-div {
+        display: none;
+    }
+
+    #menu-account {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 598px) {
+    .place-img {
+        height: 20rem;
+    }
+}
+
+@media only screen and (max-width: 972px) {
+    #right {
+        margin-top: 20px;
+        padding-left: 0;
+    }
+
+    #group-text-img {
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #table {
+        display: none;
+    }
+
+    .table-big-image img {
+        height: 100%;
+        /*530px*/
+        width: auto;
+    }
+}

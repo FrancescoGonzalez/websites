@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il mio sito</title>
+    <style>
+        .flex-container {
+            display: flex;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(147, 147, 253);
+            text-align: center;
+            color: rgb(5, 5, 186);
+        }
+
+        nav {
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+        }
+
+        main {
+            background-image: url("./img/Sfondo1.png");
+        }
+
+        footer {
+            background-color: gray;
+        }
+
+        #e {
+            color: red;
+        }
+
+        button {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Corn<em id="e">e</em>r Banca</h1>
+    </header>
+    <nav>
+
+        <button>Home</button>
+        <button>Su di noi</button>
+        <button>Contattaci</button>
+        <button>Crea un conto</button>
+
+    </nav>
+    <main>
+        <h3>Ottieni subito una carta di credito!</h3>
+        <div class="flex-container">
+            <div><img src="./img/cartaCredito.jpg" alt="Not found"></div>
+            <div><p>Le nostra carte di credito sono super belle e economiche, e facili da avere,
+                comprane una ORA!
+            </p></div>
+        </div>
+
+        <h3>Lavora per noi</h3>
+        <div class="flex-container">
+            <div><p>Il nostro personale (Fabio e Francesco) è SUPER gentile e simpatico, vieni a lavorare con noi!
+            </p></div>
+            <div><img src="./img/PostaECorner.jpg" alt="Not found"></div>
+            
+        </div>
+
+        <h3>Conto risparmio</h3>
+        <div class="flex-container">
+            <div><img src="./img/soldi.jpg" alt="Not found"></div>
+            <div><p> Fai un conto risparmio da noi, è super conveniente
+            </p></div>
+            
+        </div>
+        
+    </main>
+    <footer>
+        <p>Copyright registered by CFGB on date 30.08.2023</p>
+        <a href="www.google.com">see the Copyright</a>
+    </footer>
+</body>
+
+</html>
