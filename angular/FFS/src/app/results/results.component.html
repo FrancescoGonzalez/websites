@@ -1,0 +1,26 @@
+<div class="m-5 p-3 bg-white rounded shadow" *ngFor="let course of data.connections">
+
+  <div class="row justify-content-around">
+    <div class="col text-center">
+      <p class="mb-0">{{ from }}</p>
+      <p><b>{{ returnString(toDate(course.from.departure)) }}</b></p>
+    </div>
+    <div class="col text-center">
+      <p class="mb-0" *ngIf="course.sections.length === 1; else elsearrow">-------------></p>
+      <ng-template #elsearrow>
+        <p *ngIf="course.sections.length === 2; else elsearrow2">-- {{course.sections.length - 1}} scalo --></p>
+        <ng-template #elsearrow2>
+          <p>-- {{course.sections.length - 1}} scali --></p>
+        </ng-template>
+      </ng-template>
+
+
+      <p *ngIf="toDateFromDuration(course.duration).getHours() != 0; else elsetime "><b>{{ toDateFromDuration(course.duration).getHours() }}h {{toDateFromDuration(course.duration).getMinutes()}}min</b></p>
+      <ng-template #elsetime><p><b>{{toDateFromDuration(course.duration).getMinutes()}}min</b></p></ng-template>
+    </div>
+    <div class="col text-center">
+      <p class="mb-0">{{ to }}</p>
+      <p><b>{{ returnString(toDate(course.to.arrival)) }}</b></p>
+    </div>
+  </div>
+</div>

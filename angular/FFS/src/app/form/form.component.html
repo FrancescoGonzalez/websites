@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="navbar-brand" href="#">
+            <img src="assets/logo.png" alt="FFs" height="50px">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="bg-white m-5 p-5">
+  <legend>Cerca Collegamenti</legend>
+  <div class="mb-3">
+    <label for="from" class="form-label">Partenza</label>
+    <input type="text" class="form-control" id="from">
+  </div>
+  <div class="mb-3">
+    <label for="to" class="form-label">Arrivo</label>
+    <input type="text" class="form-control" id="to">
+  </div>
+  <button type="button" class="btn btn-primary" onclick="caller()">Cerca</button>
+</div>

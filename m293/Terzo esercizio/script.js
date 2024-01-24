@@ -56,7 +56,7 @@ function call(from, to, index) {
             p2.textContent = '->';
             const duration = document.createElement('p');
             const strong2 = document.createElement('b');
-            let d = new Date(arrival - departure) DA RIVEDERE!!!
+            let d = new Date(arrival - departure) //DA RIVEDERE!!!
             strong2.textContent = returnString(d);
             duration.appendChild(strong2);
 
